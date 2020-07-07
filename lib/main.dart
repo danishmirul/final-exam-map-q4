@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'photo_list_screen.dart';
 import 'photo_screen.dart';
 
 // import 'photo_list_screen.dart';
@@ -9,8 +10,8 @@ void main() {
     MaterialApp(
       title: 'Question 4',
       debugShowCheckedModeBanner: false,
-      // home: PhotoListScreen(),
-      home: PhotoScreen(),
+      home: PhotoListScreen(),
+      // home: PhotoScreen(),
     ),
   );
 }

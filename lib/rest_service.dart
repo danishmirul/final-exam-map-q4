@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter_photo_firebase/photo.dart';
 import 'package:http/http.dart' as http;
 
 class RestService {
@@ -53,4 +54,33 @@ class RestService {
     }
     throw response;
   }
+
+  Future<List<Photo>> getPhotos() async {
+    final json = await get('photos');
+    List<Photo> photos = List<Photo>();
+
+    for (int i = 0; i < json.length; i++) {
+      photos.add(Photo.fromJson(json[i]));
+    }
+
+    return photos;
+  }
+
+  Future<Photo> updatePhoto({int id, Photo photo, bool isliked}) async {
+    photo = updateLike(photo: photo, isLiked: isliked);
+    final json = await patch('photos/$id',
+        data: isliked ? {'like': photo.like} : {'dislike': photo.dislike});
+    return Photo.fromJson(json);
+  }
+
+  Photo updateLike({Photo photo, bool isLiked}) {
+    if (isLiked) {
+      photo.like++;
+    } else {
+      photo.dislike++;
+    }
+    return photo;
+  }
 }
+
+final restService = RestService();

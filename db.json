@@ -4,22 +4,22 @@
       "id": 1,
       "photoUrl": "http://gmm.fc.utm.my/~jumail/photos/photo1.jpg",
       "thumbUrl": "http://gmm.fc.utm.my/~jumail/preview/photo1.jpg",
-      "like": 15,
-      "dislike": 5
+      "like": 16,
+      "dislike": 6
     },
     {
       "id": 2,
       "photoUrl": "http://gmm.fc.utm.my/~jumail/photos/photo2.jpg",
       "thumbUrl": "http://gmm.fc.utm.my/~jumail/preview/photo2.jpg",
-      "like": 6,
-      "dislike": 10
+      "like": 7,
+      "dislike": 11
     },
     {
       "id": 3,
       "photoUrl": "http://gmm.fc.utm.my/~jumail/photos/photo3.jpg",
       "thumbUrl": "http://gmm.fc.utm.my/~jumail/preview/photo3.jpg",
-      "like": 30,
-      "dislike": 0
+      "like": 31,
+      "dislike": 1
     },
     {
       "id": 4,
