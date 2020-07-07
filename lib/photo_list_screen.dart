@@ -50,7 +50,11 @@ class _PhotoListScreenState extends State<PhotoListScreen> {
         itemBuilder: (context, index) {
           return ListTile(
             leading: InkWell(
-              onTap: null,
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          PhotoScreen(url: photos[index].photoURL))),
               child: Container(
                 height: 90,
                 child: Image.network(
